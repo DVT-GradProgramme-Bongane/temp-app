@@ -11,7 +11,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<PageNotFoundPage />} />
-          <Route path="/employee-directory" element={<EmployeeDirectoryPage />} /> 
+          <Route
+            path="/employee-directory"
+            element={<EmployeeDirectoryPage />}
+          />
         </Routes>
       </BrowserRouter>
     </>

@@ -34,17 +34,17 @@ export const temperatureData: Temperature[] = [
       return Math.round(fahrenheit * 100) / 100;
     },
   },
-//   {
-//   type: "rankine",
-//   symbol: "\u00B0R",
-//   calculate: false,
-//   value: 0,
-//   convertToKelvin: (rankine: number) => {
-//     return rankine * (5 / 9);
-//   },
-//   convertFromKelvin: (kelvin: number) => {
-//     const rankine = kelvin * (9 / 5);
-//     return Math.round(rankine * 100) / 100;
-//   },
-// }
+  //   {
+  //   type: "rankine",
+  //   symbol: "\u00B0R",
+  //   calculate: false,
+  //   value: 0,
+  //   convertToKelvin: (rankine: number) => {
+  //     return rankine * (5 / 9);
+  //   },
+  //   convertFromKelvin: (kelvin: number) => {
+  //     const rankine = kelvin * (9 / 5);
+  //     return Math.round(rankine * 100) / 100;
+  //   },
+  // }
 ];

@@ -1,6 +1,6 @@
 import type { Employee } from "../types/Employees";
 
-export const employees: Employee[] = [
+export const employeesData: Employee[] = [
   {
     id: 0,
     name: "Alice Johnson",
@@ -9,7 +9,7 @@ export const employees: Employee[] = [
     role: "Senior Software Engineer",
     salary: 98000,
     hireDate: new Date(2020, 2, 15), // March 15, 2020
-    isActive: true
+    isActive: true,
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ export const employees: Employee[] = [
     role: "DevOps Engineer",
     salary: 92000,
     hireDate: new Date(2021, 6, 10), // July 10, 2021
-    isActive: true
+    isActive: true,
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const employees: Employee[] = [
     role: "Product Manager",
     salary: 105000,
     hireDate: new Date(2019, 10, 1), // November 1, 2019
-    isActive: true
+    isActive: true,
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const employees: Employee[] = [
     role: "Financial Analyst",
     salary: 78000,
     hireDate: new Date(2022, 0, 20), // January 20, 2022
-    isActive: true
+    isActive: true,
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ export const employees: Employee[] = [
     role: "HR Business Partner",
     salary: 72000,
     hireDate: new Date(2018, 5, 5), // June 5, 2018
-    isActive: true
+    isActive: true,
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ export const employees: Employee[] = [
     role: "Frontend Developer",
     salary: 85000,
     hireDate: new Date(2023, 1, 14), // February 14, 2023
-    isActive: true
+    isActive: true,
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const employees: Employee[] = [
     role: "Digital Marketing Manager",
     salary: 88000,
     hireDate: new Date(2020, 8, 30), // September 30, 2020
-    isActive: true
+    isActive: true,
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ export const employees: Employee[] = [
     role: "Backend Developer",
     salary: 90000,
     hireDate: new Date(2021, 3, 18), // April 18, 2021
-    isActive: true
+    isActive: true,
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ export const employees: Employee[] = [
     role: "Customer Success Manager",
     salary: 76000,
     hireDate: new Date(2019, 11, 12), // December 12, 2019
-    isActive: false
+    isActive: false,
   },
   {
     id: 9,
@@ -99,6 +99,6 @@ export const employees: Employee[] = [
     role: "QA Engineer",
     salary: 70000,
     hireDate: new Date(2022, 7, 22), // August 22, 2022
-    isActive: true
-  }
+    isActive: true,
+  },
 ];
