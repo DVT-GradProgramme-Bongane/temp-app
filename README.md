@@ -8,19 +8,17 @@ Here are the requirements for your project, structured to ensure you hit those s
 
 The goal is to create two inputs (Celsius and Fahrenheit) that stay perfectly in sync.
 
-* **Lifting State:** Neither input component should hold its own local state for the temperature value. State must live in a common parent (`TemperatureConverter`).
-* **Controlled Components:** Both inputs must be "controlled," meaning their value is driven by React state and updated via an `onChange` handler.
-* **Two-Way Synchronization:** * Updating Celsius must immediately update Fahrenheit.
-* Updating Fahrenheit must immediately update Celsius.
-
-
+- **Lifting State:** Neither input component should hold its own local state for the temperature value. State must live in a common parent (`TemperatureConverter`).
+- **Controlled Components:** Both inputs must be "controlled," meaning their value is driven by React state and updated via an `onChange` handler.
+- **Two-Way Synchronization:** \* Updating Celsius must immediately update Fahrenheit.
+- Updating Fahrenheit must immediately update Celsius.
 
 ### The Conversion Logic
 
 Use these standard formulas for your utility functions:
 
-* **Celsius to Fahrenheit:** $F = C \times \frac{9}{5} + 32$
-* **Fahrenheit to Celsius:** $C = (F - 32) \times \frac{5}{9}$
+- **Celsius to Fahrenheit:** $F = C \times \frac{9}{5} + 32$
+- **Fahrenheit to Celsius:** $C = (F - 32) \times \frac{5}{9}$
 
 ---
 
@@ -42,26 +40,24 @@ To maintain a **Single Source of Truth**, you must follow the 5 principles of st
 
 Once the converter is functional, you will add a **Team Directory** section to practice lifting state for filtering purposes.
 
-* **The Data:** A hardcoded array of objects (e.g., `[{ id: 1, name: 'Alice', role: 'Dev' }]`).
-* **The Filter Input:** A search box component that accepts a `filterText` prop.
-* **The List:** A display component that receives the *filtered* list.
-* **The Logic:** * The parent component holds the `query` state.
-* The parent calculates the `filteredEmployees` array on every render based on that `query`.
-* **Constraint:** Do not store the "filtered list" in state. It must be a **computed value**.
-
-
+- **The Data:** A hardcoded array of objects (e.g., `[{ id: 1, name: 'Alice', role: 'Dev' }]`).
+- **The Filter Input:** A search box component that accepts a `filterText` prop.
+- **The List:** A display component that receives the _filtered_ list.
+- **The Logic:** \* The parent component holds the `query` state.
+- The parent calculates the `filteredEmployees` array on every render based on that `query`.
+- **Constraint:** Do not store the "filtered list" in state. It must be a **computed value**.
 
 ---
 
 ## 4. Technical Specifications Table
 
-| Feature | Requirement | Why? |
-| --- | --- | --- |
-| **Inputs** | Custom `<TemperatureInput />` component used twice. | Component reusability. |
-| **State Location** | The nearest common ancestor. | Implements "Lifting State Up." |
-| **Data Flow** | Downwards via props; Upwards via callbacks. | Unidirectional data flow. |
-| **Calculations** | Done during the render body (not in `useEffect`). | Ensures UI is always in sync with state. |
-| **Boilerplate** | Use `create-react-app` or `Vite`. | Standard development environment. |
+| Feature            | Requirement                                         | Why?                                     |
+| ------------------ | --------------------------------------------------- | ---------------------------------------- |
+| **Inputs**         | Custom `<TemperatureInput />` component used twice. | Component reusability.                   |
+| **State Location** | The nearest common ancestor.                        | Implements "Lifting State Up."           |
+| **Data Flow**      | Downwards via props; Upwards via callbacks.         | Unidirectional data flow.                |
+| **Calculations**   | Done during the render body (not in `useEffect`).   | Ensures UI is always in sync with state. |
+| **Boilerplate**    | Use `create-react-app` or `Vite`.                   | Standard development environment.        |
 
 ---
 
@@ -69,6 +65,6 @@ Once the converter is functional, you will add a **Team Directory** section to p
 
 To verify your work, check against these constraints:
 
-* [ ] Is there any `useState` inside the individual Input components? (There shouldn't be).
-* [ ] If you change the Celsius formula, does the Fahrenheit input update automatically without extra state setters? (It should).
-* [ ] Is the "Filtered Team List" stored in its own `useState`? (It shouldn't be; it should be derived from `employees` and `searchQuery`).
+- [ ] Is there any `useState` inside the individual Input components? (There shouldn't be).
+- [ ] If you change the Celsius formula, does the Fahrenheit input update automatically without extra state setters? (It should).
+- [ ] Is the "Filtered Team List" stored in its own `useState`? (It shouldn't be; it should be derived from `employees` and `searchQuery`).

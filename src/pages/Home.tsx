@@ -1,39 +1,76 @@
 import { useState, type BaseSyntheticEvent } from "react";
+import { temperatureData } from "../data/temperatures";
 
 export default function HomePage() {
-    const [temperature, setTemperature] = useState<number>();
-    
-    function handleTempOnChange(event: BaseSyntheticEvent){
-      setTemperature(event.target.value);
-    }
+  const [temperatures, setTemperature] = useState(temperatureData);
+  
+  function handleTempOnChange(event: BaseSyntheticEvent) {
+    const kelvinUpdate = temperatures.find( temperature => 
+      temperature.type === event.target.id);
+    console.log(kelvinUpdate);
+    let newTemperatureStates = temperatures
+      .map(
+        temp => {
+            if(temp.type === event.target.id){
+              temp.calculate = false;  
+            }
+            else {
+              temp.calculate = true;
+            }
+            console.log(temp);
+            return {...temp, value : kelvinUpdate?.convertToKelvin(Number(event.target.value))};
+        })
+      .map( 
+        temp => {
+          if(temp.calculate){
+            return {...temp, value: temp.convertFromKelvin(temp.value ? temp.value: 0)}
+          }
+          else {
+            return {...temp, value: Number(event.target.value)};
+          }
+        }
+       )
+    console.log(newTemperatureStates);
+    setTemperature(newTemperatureStates);
+  }
 
-    return (
+  return (
     <>
       <header>
-        <h1 className="temperature-header">
-            Temperature Converter
-        </h1>
+        <h1 className="temperature-header">Temperature Converter</h1>
       </header>
 
-      
       <div className="temperature-input-output-container">
-        <div className="temperature-input">
+        {temperatures.map( temperature => {
+            return (
+                <div className="temperature-input">
+                  <label htmlFor={temperature.type}>{temperature.type}</label>
+                  <input
+                    type="number"
+                    id={temperature.type}
+                    value={temperature.value}
+                    onChange={handleTempOnChange}
+                  />
+                </div>
+            );
+        })}
+        {/* <div className="temperature-input">
           <label htmlFor="celsius">Celcius</label>
-          <input 
-             id="celsius" 
-             value={temperature}
-             onChange={handleTempOnChange}
+          <input
+            id="celsius"
+            value={temperature}
+            onChange={handleTempOnChange}
           />
         </div>
         <div className="temperature-input">
           <label htmlFor="fahrenheit">Fahrenheit</label>
-          <input 
-            id="fahrenheit" 
+          <input
+            id="fahrenheit"
             value={temperature}
             onChange={handleTempOnChange}
-            />
-        </div>
+          />
+        </div> */}
       </div>
     </>
-);
+  );
 }
