@@ -1,5 +1,6 @@
-interface Temperature {
+export interface Temperature {
   type: string;
+  symbol: string;
   calculate: boolean;
   value: number;
   convertToKelvin: (value: number) => number;
@@ -9,6 +10,7 @@ interface Temperature {
 export const temperatureData: Temperature[] = [
   {
     type: "celsius",
+    symbol: "\u00B0C",
     calculate: false,
     value: 0,
     convertToKelvin: (celcius: number) => {
@@ -21,6 +23,7 @@ export const temperatureData: Temperature[] = [
   },
   {
     type: "fahrenheit",
+    symbol: "\u00B0F",
     calculate: false,
     value: 0,
     convertToKelvin: (fahrenheit: number) => {

@@ -1,5 +1,7 @@
 import { useState, type BaseSyntheticEvent } from "react";
 import { temperatureData } from "../data/temperatures";
+import TemperatureInputComponent from "../components/TemperatureInput";
+import "../styles/Home.css";
 
 export default function HomePage() {
   const [temperatures, setTemperature] = useState(temperatureData);
@@ -45,40 +47,18 @@ export default function HomePage() {
   return (
     <>
       <header>
-        <h1 className="temperature-header">Temperature Converter</h1>
+        <h1 className="temperature-header">TEMPERATURE CONVERTER</h1>
       </header>
 
       <div className="temperature-input-output-container">
         {temperatures.map((temperature) => {
           return (
-            <div className="temperature-input">
-              <label htmlFor={temperature.type}>{temperature.type}</label>
-              <input
-                type="number"
-                step={1}
-                id={temperature.type}
-                value={temperature.value}
-                onChange={handleTempOnChange}
-              />
-            </div>
+            <TemperatureInputComponent
+              temperature={temperature}
+              handleTempOnChange={handleTempOnChange}
+            />
           );
         })}
-        {/* <div className="temperature-input">
-          <label htmlFor="celsius">Celcius</label>
-          <input
-            id="celsius"
-            value={temperature}
-            onChange={handleTempOnChange}
-          />
-        </div>
-        <div className="temperature-input">
-          <label htmlFor="fahrenheit">Fahrenheit</label>
-          <input
-            id="fahrenheit"
-            value={temperature}
-            onChange={handleTempOnChange}
-          />
-        </div> */}
       </div>
     </>
   );
