@@ -16,7 +16,7 @@ export const temperatureData: Temperature[] = [
     },
     convertFromKelvin: (kelvin: number) => {
       let celcius = kelvin - 273.15;
-      return celcius;
+      return Math.round(celcius * 100) / 100;
     },
   },
   {
@@ -28,7 +28,7 @@ export const temperatureData: Temperature[] = [
     },
     convertFromKelvin: (kelvin: number) => {
       let fahrenheit = (kelvin - 273.15) * (9 / 5) + 32;
-      return fahrenheit;
+      return Math.round(fahrenheit * 100) / 100;
     },
   },
 ];

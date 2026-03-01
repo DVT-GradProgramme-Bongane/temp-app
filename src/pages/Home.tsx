@@ -16,7 +16,7 @@ export default function HomePage() {
         // such as the Rankine scale etc.
         (temp) => {
           // A 2 step mapping, determines which value should not be calculated
-          // and which shoud as well as "normalizing" the scale
+          // and which should as well as "normalizing" the scale
           if (temp.type === event.target.id) {
             temp.calculate = false;
           } else {
@@ -55,6 +55,7 @@ export default function HomePage() {
               <label htmlFor={temperature.type}>{temperature.type}</label>
               <input
                 type="number"
+                step={1}
                 id={temperature.type}
                 value={temperature.value}
                 onChange={handleTempOnChange}
