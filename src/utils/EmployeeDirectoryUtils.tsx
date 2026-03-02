@@ -8,3 +8,5 @@ export function filterItems(employees: Employee[], query: string) {
       .some((name) => name.toLowerCase().startsWith(query)),
   );
 }
+
+export const months = [];

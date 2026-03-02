@@ -1,0 +1,17 @@
+.employee-directory-table tbody{
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.employee-directory-table thead{
+  background-color: #D9D9D99E;
+}
+
+.employee-directory-table tbody{
+    background-color: #D9D9D9;
+}
+
+.employee-directory-table td{
+  text-align: center;
+}

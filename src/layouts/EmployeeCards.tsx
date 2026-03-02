@@ -1,6 +1,7 @@
 import EmployeeCardComponent from "../components/EmployeeCard";
 import type { Employee } from "../types/Employees";
 import { filterItems } from "../utils/EmployeeDirectoryUtils";
+import "../styles/EmployeeCards.css"
 
 interface EmployeeCardProps {
   employees: Employee[];
@@ -13,10 +14,14 @@ export default function EmployeeCardLayout({
 }: EmployeeCardProps) {
   return (
     <>
-      <table>
+      <table className="employee-directory-table">
         <thead>
           <tr>
+            <th>Employee ID</th>
             <th>Name</th>
+            <th>Role</th>
+            <th>Date Hired</th>
+            <th>Active</th>
           </tr>
         </thead>
         <tbody>
