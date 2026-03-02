@@ -1,7 +1,7 @@
 import EmployeeCardComponent from "../components/EmployeeCard";
 import type { Employee } from "../types/Employees";
 import { filterItems } from "../utils/EmployeeDirectoryUtils";
-import "../styles/EmployeeCards.css"
+import "../styles/EmployeeCards.css";
 
 interface EmployeeCardProps {
   employees: Employee[];

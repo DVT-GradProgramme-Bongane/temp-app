@@ -4,10 +4,17 @@ body {
   font-style: normal;
 }
 
+:root {
+  --temp-color: #3498db;
+  --animation-duration: 1s;
+}
+
 .temperature-input-output-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 20px;
   flex-wrap: wrap;
+  color: var(--temp-color);
+  transition: color var(--animation-duration) ease;
 }

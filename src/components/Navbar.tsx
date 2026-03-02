@@ -22,7 +22,6 @@ export default function Navbar() {
         >
           Team Directory
         </NavLink>
-
       </div>
     </nav>
   );

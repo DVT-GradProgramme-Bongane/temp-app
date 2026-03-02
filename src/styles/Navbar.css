@@ -1,5 +1,3 @@
-/* navbar.css */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -32,8 +30,7 @@
 /* Hover state */
 .navlink:hover {
   color: #213547;
-  background-color: 
-  rgba(0, 0, 0, 0.466);
+  background-color: rgba(0, 0, 0, 0.466);
 }
 
 /* Active route */

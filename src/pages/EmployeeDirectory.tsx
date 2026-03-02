@@ -13,7 +13,7 @@ export default function EmployeeDirectoryPage() {
   }
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <header>
         <h1>EMPLOYEE DIRECTORY</h1>
       </header>
