@@ -1,0 +1,53 @@
+export interface Temperature {
+  type: string;
+  symbol: string;
+  calculate: boolean;
+  value: number;
+  convertToKelvin: (value: number) => number;
+  convertFromKelvin: (kelvin: number) => number;
+  color: string;
+}
+
+export const temperatureData: Temperature[] = [
+  {
+    type: "celsius",
+    symbol: "\u00B0C",
+    calculate: false,
+    value: 0,
+    convertToKelvin: (celcius: number) => {
+      return celcius + 273.15;
+    },
+    convertFromKelvin: (kelvin: number) => {
+      let celcius = kelvin - 273.15;
+      return Math.round(celcius * 100) / 100;
+    },
+    color: "#3498db",
+  },
+  {
+    type: "fahrenheit",
+    symbol: "\u00B0F",
+    calculate: false,
+    value: 0,
+    convertToKelvin: (fahrenheit: number) => {
+      return (fahrenheit - 32) * (5 / 9) + 273.15;
+    },
+    convertFromKelvin: (kelvin: number) => {
+      let fahrenheit = (kelvin - 273.15) * (9 / 5) + 32;
+      return Math.round(fahrenheit * 100) / 100;
+    },
+    color: "#3498db",
+  },
+  //   {
+  //   type: "rankine",
+  //   symbol: "\u00B0R",
+  //   calculate: false,
+  //   value: 0,
+  //   convertToKelvin: (rankine: number) => {
+  //     return rankine * (5 / 9);
+  //   },
+  //   convertFromKelvin: (kelvin: number) => {
+  //     const rankine = kelvin * (9 / 5);
+  //     return Math.round(rankine * 100) / 100;
+  //   },
+  // }
+];
