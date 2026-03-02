@@ -1,0 +1,43 @@
+/* navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #d9d9d9;
+  color: #9d9d9d;
+}
+
+.navbar__logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Default link */
+.navlink {
+  text-decoration: none;
+  color: #213547;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+/* Hover state */
+.navlink:hover {
+  color: #213547;
+  background-color: 
+  rgba(0, 0, 0, 0.466);
+}
+
+/* Active route */
+.navlink--active {
+  color: #213547;
+  background-color: rgba(57, 57, 57, 0.207);
+}

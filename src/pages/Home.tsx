@@ -2,6 +2,7 @@ import { useState, type BaseSyntheticEvent } from "react";
 import { temperatureData } from "../data/temperatures";
 import TemperatureInputComponent from "../components/TemperatureInput";
 import "../styles/Home.css";
+import Navbar from "../components/Navbar";
 
 export default function HomePage() {
   const [temperatures, setTemperature] = useState(temperatureData);
@@ -46,6 +47,7 @@ export default function HomePage() {
 
   return (
     <>
+      <Navbar />
       <header>
         <h1 className="temperature-header">TEMPERATURE CONVERTER</h1>
       </header>

@@ -3,6 +3,7 @@ import { employeesData } from "../data/employees";
 import EmployeeSearchComponent from "../components/EmployeeSearch";
 import "../styles/EmployeeDirectory.css";
 import EmployeeCardLayout from "../layouts/EmployeeCards";
+import Navbar from "../components/Navbar";
 
 export default function EmployeeDirectoryPage() {
   const [query, setQuery] = useState("");
@@ -12,6 +13,7 @@ export default function EmployeeDirectoryPage() {
   }
   return (
     <>
+      <Navbar/>
       <header>
         <h1>EMPLOYEE DIRECTORY</h1>
       </header>
