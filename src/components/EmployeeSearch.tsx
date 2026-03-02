@@ -11,8 +11,8 @@ export default function EmployeeSearchComponent({
 }: EmployeeSearchProp) {
   return (
     <>
-      <label htmlFor="employees">Employee name: </label>
-      <input id="employees" value={query} onChange={setQueryOnChange} />
+      <label htmlFor="employees"></label>
+      <input id="employees" value={query} onChange={setQueryOnChange} placeholder="SEARCH..."/>
     </>
   );
 }

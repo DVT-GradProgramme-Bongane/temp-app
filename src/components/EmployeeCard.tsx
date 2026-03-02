@@ -6,8 +6,8 @@ interface EmployeeCardProp {
 
 export default function EmployeeCardComponent({ employee }: EmployeeCardProp) {
   return (
-    <>
-      <div>{employee.name}</div>
-    </>
+  
+      <tr>{employee.name}</tr>
+    
   );
 }

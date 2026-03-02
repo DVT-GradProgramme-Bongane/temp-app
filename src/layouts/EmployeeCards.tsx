@@ -13,9 +13,14 @@ export default function EmployeeCardLayout({
 }: EmployeeCardProps) {
   return (
     <>
+    <table>
+      <thead>
+        Name
+      </thead>
       {filterItems(employees, query).map((employee) => {
         return <EmployeeCardComponent employee={employee} />;
       })}
+      </table>
     </>
   );
 }

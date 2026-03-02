@@ -1,7 +1,8 @@
 import { useState, type BaseSyntheticEvent } from "react";
 import { employeesData } from "../data/employees";
-import { filterItems } from "../utils/EmployeeDirectoryUtils";
 import EmployeeSearchComponent from "../components/EmployeeSearch";
+import "../styles/EmployeeDirectory.css"
+import EmployeeCardLayout from "../layouts/EmployeeCards";
 
 export default function EmployeeDirectoryPage() {
   const [query, setQuery] = useState("");
@@ -11,14 +12,15 @@ export default function EmployeeDirectoryPage() {
   }
   return (
     <>
+      <header>
+        <h1>EMPLOYEE DIRECTORY</h1>
+      </header>
       <div>
         <EmployeeSearchComponent
           query={query}
           setQueryOnChange={setQueryOnChange}
         />
-        {filterItems(employeesData, query).map((employee) => {
-          return <div>{employee.name}</div>;
-        })}
+        <EmployeeCardLayout employees={employeesData} query={query} />
         <div className="list-of-employees"></div>
       </div>
     </>
