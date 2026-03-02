@@ -1,7 +1,7 @@
 import { useState, type BaseSyntheticEvent } from "react";
 import { employeesData } from "../data/employees";
 import EmployeeSearchComponent from "../components/EmployeeSearch";
-import "../styles/EmployeeDirectory.css"
+import "../styles/EmployeeDirectory.css";
 import EmployeeCardLayout from "../layouts/EmployeeCards";
 
 export default function EmployeeDirectoryPage() {

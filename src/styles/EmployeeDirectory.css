@@ -1,8 +1,8 @@
-body{
-    place-items: unset;
+body {
+  place-items: unset;
 }
 
-#root{
-    text-align: unset;
-    margin: 0;
+#root {
+  text-align: unset;
+  margin: 0;
 }

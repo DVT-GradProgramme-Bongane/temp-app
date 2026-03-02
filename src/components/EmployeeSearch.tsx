@@ -12,7 +12,12 @@ export default function EmployeeSearchComponent({
   return (
     <>
       <label htmlFor="employees"></label>
-      <input id="employees" value={query} onChange={setQueryOnChange} placeholder="SEARCH..."/>
+      <input
+        id="employees"
+        value={query}
+        onChange={setQueryOnChange}
+        placeholder="SEARCH..."
+      />
     </>
   );
 }
